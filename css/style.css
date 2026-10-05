@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.winDialog {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalBody {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding: 25px;
+    background-color: white;
+    border-radius: 12px;
+
+}
+
+/* .modalHidden {
+    display: none;
+} */
+
+.btnCloseModal {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.okModal {
+    width: 50px;
+}
+
+.regForm {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.modalBody {
+    box-shadow: 0px 4px 4px 0px rgb(95, 91, 91);
+}

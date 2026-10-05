@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/style.css" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="openDialogBtn">Open modal</button>
+    <div class="winDialog modalHidden">
+        <div class="modalBody">
+            <button class="btnCloseModal">
+                <img src="/img/close.svg">
+            </button>
+
+
+            <h3>Регистрация</h3>
+            <div class="regForm">
+                <label>Имя</label><input class="name" type="text" /> <br />
+                <label>Телефон</label><input class="phone" type="text" /> <br />
+                <label>Email</label><input class="email" type="text" /> <br />
+                <label>Пароль</label><input class="password" type="text" /> <br />
+
+
+            </div>
+            <button class="okModal">ok</button>
+        </div>
+    </div>
+</body>
+<script src="/scripts/script.js"></script>
+
+</html>
