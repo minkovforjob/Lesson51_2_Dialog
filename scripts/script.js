@@ -9,9 +9,73 @@
 
 const openDialogBtn = document.querySelector(".openDialogBtn");
 const winDialog = document.querySelector(".winDialog");
-// const modalBody = document.querySelector(".modalBody");
+const winDialogBody = document.querySelector(".winDialogBody");
+const btnOkDialog = document.querySelector(".btnOkDialog");
+const btnCloseDialog = document.querySelector(".btnCloseDialog");
+const littleModal = document.querySelector(".littleModal");
+const littleModalBody = document.querySelector(".littleModalBody");
+const btnCloselittleModal = document.querySelector(".btnCloselittleModal");
+const btnOklittleModal = document.querySelector(".btnOklittleModal");
 
-
-openModalBtn.addEventListener("click", () => {
-    modal.classList.remove("modalHidden");
+openDialogBtn.addEventListener("click", () => {
+    winDialog.classList.remove("dialogHidden");
 })
+
+winDialog.addEventListener("click", () => {
+    winDialog.classList.add("dialogHidden");
+});
+
+winDialogBody.addEventListener("click", (event) => {
+    event.stopPropagation();
+})
+
+
+btnCloseDialog.addEventListener("click", () => {
+    winDialog.classList.add("dialogHidden");
+});
+
+
+document.addEventListener("keydown", (event) => {
+    if ((event.key === "Escape") && (!littleModal.classList.contains("modalHidden"))) {
+        littleModal.classList.add("modalHidden");
+    }
+    else { winDialog.classList.add("dialogHidden") }
+
+});
+
+// btnOkDialog.addEventListener("click", () => {
+//     // winDialog.classList.add("dialogHidden");
+//     littleModal.classList.remove("modalHidden");
+//     console.log("littleModal.classList.remove(modalHidden)");
+// });
+
+btnOkDialog.addEventListener("click", () => {
+    littleModal.classList.remove("modalHidden");
+});
+
+littleModal.addEventListener("click", () => {
+    littleModal.classList.add("modalHidden");
+});
+
+//чтобы клик по фону закрывал модальное окно, но клик внутри littleModalBody — нет
+littleModalBody.addEventListener("click", (event) => {
+    event.stopPropagation();
+})
+
+btnCloselittleModal.addEventListener("click", () => { littleModal.classList.add("modalHidden"); });
+btnOklittleModal.addEventListener("click", () => {
+    littleModal.classList.add("modalHidden");
+    winDialog.classList.add("dialogHidden");
+});
+
+
+
+
+
+
+
+
+
+
+
+

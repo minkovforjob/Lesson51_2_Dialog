@@ -10,23 +10,32 @@
 
 <body>
     <button class="openDialogBtn">Open modal</button>
-    <div class="winDialog modalHidden">
-        <div class="modalBody">
-            <button class="btnCloseModal">
+    <div class="winDialog dialogHidden">
+        <div class="winDialogBody">
+            <button class="btnCloseDialog">
                 <img src="/img/close.svg">
             </button>
 
-
             <h3>Регистрация</h3>
-            <div class="regForm">
+            <form class="regForm">
                 <label>Имя</label><input class="name" type="text" /> <br />
                 <label>Телефон</label><input class="phone" type="text" /> <br />
                 <label>Email</label><input class="email" type="text" /> <br />
                 <label>Пароль</label><input class="password" type="text" /> <br />
 
+                <button class="btnOkDialog" type="button">ok</button>
+            </form>
 
-            </div>
-            <button class="okModal">ok</button>
+        </div>
+    </div>
+
+    <div class="littleModal modalHidden">
+        <div class="littleModalBody">
+            <button class="btnCloselittleModal">
+                <img src="/img/close.svg">
+            </button>
+            <p>Сохранить данные?</p>
+            <button class="btnOklittleModal">ok</button>
         </div>
     </div>
 </body>
